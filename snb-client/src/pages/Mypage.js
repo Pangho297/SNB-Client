@@ -7,7 +7,6 @@ import AddList from '../components/AddList';
 import Userinfo from '../components/Userinfo';
 
 const Mypage = (props) => {
-  console.log(props.userdata);
   const email = 'user1@gmail.com';
   const [isOpenPopup, setIsOpenPopup] = useState(false);
 
