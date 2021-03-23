@@ -11,7 +11,7 @@ import './MyList.css';
 
 
 const MyList = ({ lists, listHandler, setCurrentListId, requestAddList, requestRemoveList }) => {
-  const [listname, setListname] = useState(lists[0].name);
+  const [listname, setListname] = useState(lists.name ? lists[0].name : '리스트 없음');
   const [isSearchable] = useState(false);
   const [isOpenPopup, setIsOpenPopup] = useState(false);
   const [isAddBtn, setIsAddBtn] = useState(true);
@@ -96,7 +96,7 @@ const MyList = ({ lists, listHandler, setCurrentListId, requestAddList, requestR
           className="dropdown"
           styles={customStyles}
           placeholder={lists.length !== 0 ? '리스트를 선택해주세요' : '리스트 없음'}
-          value={options.label}
+          value={options.label || ''}
           onChange={handleChange}
           options={options}
           isSearchable={isSearchable}
