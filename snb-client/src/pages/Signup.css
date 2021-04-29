@@ -1,0 +1,84 @@
+@import "../variables.css";
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  height: 500px;
+  border: 1px solid #000000;
+  border-radius: var(--radius-mid);
+  padding: 20px;
+  /* box-shadow: var(--shadow); */
+  box-shadow:
+    0 0 20px rgb(0, 0, 0),
+    -20px 0 60px  var(--header-border-color),
+    20px 0 60px #fff,
+    inset 0 0 60px #fff,
+    inset 60px 0 60px  var(--header-border-color),
+    inset -60px 0 60px #fff,
+    inset 60px 0 100px  var(--header-border-color),
+    inset -60px 0 100px #fff;
+  animation: pulsate 6s linear infinite;
+}
+@keyframes pulsate {
+  50% {
+    box-shadow:
+      0 0 20px #fff,
+      20px 0 60px  var(--nav-point-color),
+      -20px 0 60px #fff,
+      inset 0 0 60px #fff,
+      inset -60px 0 60px  var(--nav-point-color),
+      inset 60px 0 60px #fff,
+      inset -60px 0 100px var(--nav-point-color),
+      inset 60px 0 100px #fff;
+  }
+}
+.signup-inputbox,
+.signup-buttonbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.signup-email,
+.signup-username,
+.signup-password,
+.signup-check {
+  font-size: var(--font-small);
+  border-radius: var(--radius-mid);
+  border: var(--item-border);
+  padding: 10px;
+  outline: none;
+  margin-bottom: 15px
+}
+
+.signup-button {
+  cursor: pointer;
+  font-size: var(--font-mid);
+  border-radius: var(--radius-small);
+  border: var(--item-border);
+  background-color: var(--main-color);
+  padding: 10px;
+  outline: none;
+  margin-top: 10px;
+}
+
+.signup-error {
+  font-size: #aea1eabe;
+  text-align: center;
+  color: var(--red);
+}
+
+.signup-button:hover {
+  background-color: var(--withe-red);
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.signup-button:active {
+  background-color: var(--header-border-color);
+}

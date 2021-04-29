@@ -1,0 +1,189 @@
+@import "../variables.css";
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 500px;
+  border: 1px solid white(0, 0, 0);
+  border-radius: 20px;
+  padding: 20px;
+  /* box-shadow: var(--shadow); */
+  box-shadow:
+    0 0 20px rgb(0, 0, 0),
+    -20px 0 60px  var(--header-border-color),
+    20px 0 60px #fff,
+    inset 0 0 60px #fff,
+    inset 60px 0 60px  var(--header-border-color),
+    inset -60px 0 60px #fff,
+    inset 60px 0 100px  var(--header-border-color),
+    inset -60px 0 100px #fff;
+  animation: login-pulsate 6s linear infinite;
+}
+
+  
+
+@keyframes login-pulsate {
+  0%{ background: #fff}
+  50% {
+    box-shadow:
+      0 0 20px #fff,
+      20px 0 60px  var(--nav-point-color),
+      -20px 0 60px #fff,
+      inset 0 0 60px #fff,
+      inset -60px 0 60px  var(--nav-point-color),
+      inset 60px 0 60px #fff,
+      inset -60px 0 100px var(--nav-point-color),
+      inset 60px 0 100px #fff;
+  }
+}
+
+
+.login-title {
+  font-size: var(--font-large);
+  margin-bottom: 20px;
+}
+
+.login-email,
+.login-password {
+  font-size: var(--font-mid);
+  border-radius: var(--radius-mid);
+  border: 2px solid #000000;
+  padding: 10px;
+  outline: none;
+}
+
+.login-email {
+  margin-bottom: 10px;
+}
+
+.login-items {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  justify-content: space-between;
+}
+
+.login-input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.login-err {
+  font-size: var(--font-small);
+  text-align: center;
+  color: var(--red);
+}
+
+.login-btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-signin,
+.login-signup {
+  margin-bottom: 10px;
+  font-size: var(--font-mid);
+  padding: 10px;
+  background-color: #ffffff;
+  outline: none;
+  border: var(--item-border);
+  border-radius: var(--radius-small);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+.login-gbox {
+  display: flex;
+  justify-content: space-between;
+}
+.login-guest {
+  cursor: pointer;
+  font-size: var(--font-mid);
+  background-color: #ffffff;
+  padding: 10px;
+  outline: none;
+  border: var(--item-border);
+  border-radius: var(--radius-small);
+  color: #000000;
+  font-weight: 500;
+  width: 49%;
+}
+
+.login-signin:hover,
+.login-signup:hover,
+.login-guest:hover {
+  background-color: #aea1eabe;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.login-signin:active,
+.login-signup:active,
+.login-guest:active {
+  background-color: var(--header-border-color);
+}
+
+.login-github {
+  cursor: pointer;
+  font-size: var(--font-mid);
+  background-color: #000000;
+  padding: 10px;
+  outline: none;
+  border: var(--item-border);
+  border-radius: var(--radius-small);
+  color: #ffffff;
+  font-weight: 500;
+  width: 49%;
+}
+
+.login-github:hover {
+  background-color: #535353;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.login-github:active {
+  background-color: var(--main-color);
+  color: #000000;
+}
+
+/*네온*/
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-neon {
+  font-size: 3vw;
+  line-height: 5vw;
+  font-family: 'Do Hyeon', sans-serif;
+  z-index: 6;
+  margin-bottom: 10%;
+  
+}
+
+.login-neon {
+  animation: neon1 6s ease infinite;
+}
+
+@keyframes neon1 {
+  0%,
+  100% {
+    text-shadow: 0 0 0.75vw var(--header-border-color), 0 0 2.25vw var(--header-border-color), 0 0 5vw var(--header-border-color), 0 0 5vw #f74667, 0 0 .3vw #ff3399, .3vw .2vw .1vw #61335e;
+    color: #F5DEFA;
+  }
+  
+  50% {
+    text-shadow: 0 0 .5vw #8d192b, 0 0 1.5vw #8d192b, 0 0 5vw #8d192b, 0 0 5vw #8d192b, 0 0 .2vw #8d192b, .3vw .2vw .1vw #c08399;
+    color: #e8447d;
+  }
+}     
+
