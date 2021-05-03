@@ -1,6 +1,6 @@
 # 🎤 SNB
 
-<img src="https://songnumberbook.ga/static/media/snb_logo.3845d09d.png" height="100px" />
+<img src="https://songnumberbook.shop/static/media/snb_logo.3845d09d.png" height="100px" />
 
 ### [SongNumberBook](https://songnumberbook.shop)
 
